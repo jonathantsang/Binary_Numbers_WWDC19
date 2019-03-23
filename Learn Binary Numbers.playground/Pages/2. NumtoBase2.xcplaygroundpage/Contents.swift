@@ -1,16 +1,43 @@
-
- // [Previous](@previous) | [Next](@next)
-
 /*:
  - - -
  ## What is a binary number?
  
  * callout(Goal):
- Learn how to convert a number to binary [cipher](glossary://binary).
+ Learn about the differences between a decimal number and a binary number.
  
- When people think about numbers they usually think of 0, 1, 2, 3, 4, and beyond. As th
+ ## Base 10
+ 
+ When people think about numbers they usually think of 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 and beyond. But how does a computer interpret numbers in the programs and code that has been written. In many cases a computer executes code only filled with 0s and 1s. This is problematic for people who want to represent numbers larger than 0 and 1. Luckily there is a way to represent any number we want with 0s and 1s. Our usual number system also known as the decimal system from 0-9 digits is called base 10, where 10 denotes an extra grouping for the next level.
+ 
+ For example 23 can be represented as:
+ 
+ 2 * 10 + 3 * 10 = 23
+ 
+ Where 23 contains two tens and three ones to form 23.
+ 
+ We can also represent 23 using powers of 10.
+ 
+ 2 * 10^1 + 3 * 10^0 = 23
+ 
+ We notice here that the ones digit 3 is multiplied by 10^0 and the tens digit 2 is multiplied by 10^1, and each increasing column in the number would be multiplied by 10 to an increasing exponent.
  
  This section will teach you about the binary numbers and how a base 10 number can be converted to a base 2 number also known as a binary number.
+ 
+ ## Base 2
+ 
+ A number represented in base 2 has only the digits 0 and 1 to represent numbers, and every 2 represents another grouping. If that doesn't immediately make sense let's try an example.
+ 
+ The number 2 can be represented as:
+ 
+ 2 * 1 = 2
+ 
+ Where 2 contains two ones.
+ 
+ We can also represent 2 using powers of 2.
+ 
+ 2 * 2^0 = 2
+ 
+ Similarly from the base 10 example, we use building blocks of powers of the base number to form our numbers.
  
  * callout(Process):
  The binary conversion process is like this:
@@ -33,8 +60,7 @@
  - - -
  */
 
-var number = 0
-var numbertoconvert = /*#-editable-code*/40/*#-end-editable-code*/
+var base10number = /*#-editable-code*/4/*#-end-editable-code*/
 
 //#-hidden-code
 
@@ -71,7 +97,7 @@ public func toBinary(num: String) -> String {
     return "0"
   }
   var ans = ""
-  number = Int(num)!
+  var number = Int(num)!
   while (number > 0){
     let quotient = number / 2
     let remainder = number % 2
@@ -91,12 +117,8 @@ public func updateLabels(numberString: Int) {
 }
 
 // Draw Labels
-updateLabels(numberString: numbertoconvert)
+updateLabels(numberString: base10number)
 
 PlaygroundPage.current.liveView = view
 //#-end-hidden-code
-
-
-// [Previous](@previous) | [Next](@next)
-
 
