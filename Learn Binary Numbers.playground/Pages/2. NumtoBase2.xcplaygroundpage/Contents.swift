@@ -119,12 +119,12 @@ let screenWidth = screenSize.width
 let screenHeight = screenSize.height
 
 // Create labels
-let numberLabel = UILabel(frame: CGRect(x: screenWidth / 2, y: 100, width: 300, height: 50))
+let numberLabel = UILabel(frame: CGRect(x: screenWidth / 2, y: 100, width: 300, height: 60))
 numberLabel.font = UIFont.systemFont(ofSize: 50)
 numberLabel.textColor = UIColor.purple
 numberLabel.textAlignment = .center
 numberLabel.text = "0"
-let binaryLabel = UILabel(frame: CGRect(x: screenWidth / 2, y: screenHeight - 500, width: 300, height: 50))
+let binaryLabel = UILabel(frame: CGRect(x: screenWidth / 2, y: screenHeight - 500, width: 300, height: 60))
 binaryLabel.font = UIFont.systemFont(ofSize: 50)
 binaryLabel.textColor = UIColor.purple
 binaryLabel.textAlignment = .center

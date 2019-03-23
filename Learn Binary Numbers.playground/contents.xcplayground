@@ -4,7 +4,7 @@
         <page name='1. Intro'/>
         <page name='2. NumtoBase2'/>
         <page name='3. Base2toNum'/>
-        <page name='5. Conclusion'/>
         <page name='4. Extras'/>
+        <page name='5. Conclusion'/>
     </pages>
 </playground>
