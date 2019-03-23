@@ -5,7 +5,10 @@ import PlaygroundSupport
  - - -
  
  # Learn Binary Numbers by Jonathan Tsang
- ## Learn about decimal and binary numbers, how binary numbers are converted to decimal and back, and learn about uses for binary numbers.
+ - Note: We will cover
+ * Differences in Decimal and Binary Numbers
+ * Show conversion from one base to another
+ * Show applications of binary numbers
  
  - - -
  */

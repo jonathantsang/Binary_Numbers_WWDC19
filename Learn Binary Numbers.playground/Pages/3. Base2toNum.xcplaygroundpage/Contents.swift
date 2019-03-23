@@ -4,7 +4,13 @@
 
 //#-end-hidden-code
 
-// Here you can change the colours of the mastermind
+/*:
+ - - -
+ ## What is a binary number?
+ Now that we know how to convert from decimal numbers to binary numbers, how do we do it in the other direction?
+ 
+ 
+ - - -
 
-
+*/
 //: [Next](@next)
