@@ -103,10 +103,10 @@
  - - -
  
  Try converting a number that you input to binary in the code below.
- - - -
+ 
  */
 
-var base10number = /*#-editable-code*/4/*#-end-editable-code*/
+var base10number = /*#-editable-code*/109/*#-end-editable-code*/
 
 //#-hidden-code
 
@@ -121,50 +121,27 @@ let screenHeight = 700
 // Create labels
 let numberLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 500, width: 300, height: 60))
 numberLabel.font = UIFont(name: "KohinoorTelugu-Medium", size: 50)
-numberLabel.textColor = UIColor.purple
-numberLabel.textAlignment = .center
+numberLabel.textColor = UIColor.white
 numberLabel.text = "0"
 
-let binaryLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 200, width: 300, height: 60))
+let binaryLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 200, width: 600, height: 60))
 binaryLabel.font = UIFont(name: "KohinoorTelugu-Medium", size: 50)
-binaryLabel.textColor = UIColor.purple
-binaryLabel.textAlignment = .center
+binaryLabel.textColor = UIColor.white
 binaryLabel.text = "0"
 
 var view = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
-view.backgroundColor = UIColor.white
+view.backgroundColor = UIColor.black
 
-// Draw emojis
-let emoji = UIImage(named: "happyemoji.png")
-
-let imageView = UIImageView(image: emoji!)
-imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-view.addSubview(imageView)
 
 view.addSubview(numberLabel)
 view.addSubview(binaryLabel)
 
-// Converts a number string to a binary string
-public func toBinary(num: String) -> String {
-  if (num == "0"){
-    return "0"
-  }
-  var ans = ""
-  var number = Int(num)!
-  while (number > 0){
-    let quotient = number / 2
-    let remainder = number % 2
-    ans = String(remainder) + ans
-    number = quotient
-  }
-  return ans
-}
-
+let cv = ConversionUtilities()
 // Update the number and label when it is changed
 public func updateLabels(numberString: Int) {
   numberLabel.text = "Decimal: " + String(numberString)
   
-  let binaryString = toBinary(num: String(numberString))
+  let binaryString = cv.toBinary(num: String(numberString))
   binaryLabel.text = "Binary: " + binaryString
   // Check if done
 }

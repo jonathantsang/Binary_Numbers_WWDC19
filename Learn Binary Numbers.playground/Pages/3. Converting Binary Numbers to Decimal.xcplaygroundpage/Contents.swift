@@ -22,12 +22,12 @@
  
  - - -
  
- Try converting a binary number that you input to base 10 in the code below.
+ Try converting a binary number that you input to base 10 in the code below. Remember binary numbers only contain 0s and 1s!
  
  - - -
  */
 
-var base2number = /*#-editable-code*/10/*#-end-editable-code*/
+var base2number = /*#-editable-code*/110/*#-end-editable-code*/
 
 //#-hidden-code
 
@@ -42,40 +42,26 @@ let screenHeight = 500
 // Create labels
 let numberLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 200, width: 300, height: 60))
 numberLabel.font = UIFont(name: "KohinoorTelugu-Medium", size: 50)
-numberLabel.textColor = UIColor.purple
-numberLabel.textAlignment = .center
+numberLabel.textColor = UIColor.white
 numberLabel.text = "0"
-let binaryLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 300, width: 300, height: 60))
+let binaryLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 500, width: 300, height: 60))
 binaryLabel.font = UIFont(name: "KohinoorTelugu-Medium", size: 50)
-binaryLabel.textColor = UIColor.purple
-binaryLabel.textAlignment = .center
+binaryLabel.textColor = UIColor.white
 binaryLabel.text = "0"
 
 var view = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
-view.backgroundColor = UIColor.white
+view.backgroundColor = UIColor.black
 
 view.addSubview(binaryLabel)
 view.addSubview(numberLabel)
 
-// Converts a binary string to a decimal string
-public func toDecimal(num: String) -> Int {
-  var ans = 0
-  var i = NSDecimalNumber(decimal: pow(2, num.count-1)).intValue
-  for index in num.indices {
-    if (num[index] == "1"){
-      ans += i
-    }
-    i /= 2
-  }
-  return ans
-}
-
+let cv = ConversionUtilities()
 // Update the number and label when it is changed
 public func updateLabels(binaryString: Int) {
-  let numberString = toDecimal(num: String(binaryString))
-  numberLabel.text = "Decimal: " + String(binaryString)
+  let numberString = cv.toDecimal(num: String(binaryString))
+  numberLabel.text = "Decimal: " + String(numberString)
   
-  binaryLabel.text = "Binary: " + String(numberString)
+  binaryLabel.text = "Binary: " + String(binaryString)
   // Check if done
 }
 
