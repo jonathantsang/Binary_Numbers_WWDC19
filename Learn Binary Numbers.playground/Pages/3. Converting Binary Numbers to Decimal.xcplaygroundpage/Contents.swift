@@ -1,5 +1,4 @@
 //: [Previous](@previous)
-
 /*:
  - - -
  ## Conversion from Binary to Decimal
