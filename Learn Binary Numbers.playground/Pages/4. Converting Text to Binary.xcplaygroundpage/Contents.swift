@@ -15,6 +15,7 @@
  
  Lower case letters are represented by their own number. Such as:
  a -> 97
+ 
  b -> 98
  
  Capital letters are also represented with their own unique numbers.
@@ -29,7 +30,7 @@
  
  - - -
  
- Try writing your name in the message below and see what your name is in binary. Make sure to include "" around your name in the input.
+ Try writing your name in the message below and see what your name is in binary.
  
  - - -
  */
@@ -48,16 +49,19 @@ let screenWidth = screenSize.width
 let screenHeight = screenSize.height
 
 // Create labels
-let messageLabel = UILabel(frame: CGRect(x: 0, y: 100, width: 300, height: 60))
+let messageLabel = UILabel(frame: CGRect(x: 50, y: screenWidth - 800, width: screenWidth, height: 60))
 messageLabel.font = UIFont.systemFont(ofSize: 50)
 messageLabel.textColor = UIColor.purple
-messageLabel.textAlignment = .left
 messageLabel.text = "0"
-let convertedLabel = UILabel(frame: CGRect(x: 0, y: screenHeight - 500, width: screenWidth, height: 60))
+messageLabel.lineBreakMode = .byWordWrapping
+messageLabel.numberOfLines = 0
+
+let convertedLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 700, width: screenWidth, height: 60))
 convertedLabel.font = UIFont.systemFont(ofSize: 30)
 convertedLabel.textColor = UIColor.purple
-convertedLabel.textAlignment = .left
 convertedLabel.text = "0"
+convertedLabel.lineBreakMode = .byWordWrapping
+convertedLabel.numberOfLines = 0
 
 var view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight))
 view.backgroundColor = UIColor.white
