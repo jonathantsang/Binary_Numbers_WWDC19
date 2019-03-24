@@ -106,7 +106,7 @@
  
  */
 
-var base10number = /*#-editable-code*/109/*#-end-editable-code*/
+var base10number = /*#-editable-code*/23/*#-end-editable-code*/
 
 //#-hidden-code
 

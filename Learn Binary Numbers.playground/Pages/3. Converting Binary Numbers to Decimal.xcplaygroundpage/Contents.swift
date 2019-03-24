@@ -36,8 +36,8 @@ import UIKit
 import PlaygroundSupport
 
 // Screen
-let screenWidth = 500
-let screenHeight = 500
+let screenWidth = 700
+let screenHeight = 700
 
 // Create labels
 let numberLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 200, width: 300, height: 60))
