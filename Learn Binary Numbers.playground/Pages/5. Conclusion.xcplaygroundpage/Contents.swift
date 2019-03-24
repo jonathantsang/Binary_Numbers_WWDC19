@@ -13,7 +13,7 @@
  
  There are many more topics for learning beyond in this area of number theory with topics:
  
- - Even more number systems beyeond base 2 and base 10, with base 16 known as hexadecimal, base 8 octets, and even bases larger than 10
+ - Even more number systems beyond base 2 and base 10, with base 16 known as hexadecimal, base 8 known as octal, and more
  - AND, OR, XOR, and other bit operators that operate on binary numbers. How you can change a number based on which 0s and 1s it possesses.
  - Bit shifting in binary numbers to count the number of bits, find patterns in the bits, and more
  */
