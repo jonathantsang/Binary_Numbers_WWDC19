@@ -35,7 +35,7 @@
  - - -
  */
 
-var message = /*#-editable-code*/"Jon"/*#-end-editable-code*/
+var message = /*#-editable-code*/"Jonathan Tsang"/*#-end-editable-code*/
 
 //#-hidden-code
 
@@ -44,19 +44,19 @@ import UIKit
 import PlaygroundSupport
 
 // Screen
-let screenWidth = 500
-let screenHeight = 500
+let screenWidth = 700
+let screenHeight = 700
 
 // Create labels
-let messageLabel = UILabel(frame: CGRect(x: 50, y: screenWidth - 300, width: screenWidth, height: 60))
-messageLabel.font = UIFont.systemFont(ofSize: 50)
+let messageLabel = UILabel(frame: CGRect(x: 50, y: 100, width: screenWidth, height: 60))
+messageLabel.font = UIFont(name: "KohinoorTelugu-Medium", size: 50)
 messageLabel.textColor = UIColor.purple
 messageLabel.text = "0"
 messageLabel.lineBreakMode = .byWordWrapping
 messageLabel.numberOfLines = 0
 
-let convertedLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 200, width: screenWidth, height: 60))
-convertedLabel.font = UIFont.systemFont(ofSize: 30)
+let convertedLabel = UILabel(frame: CGRect(x: 50, y: 200, width: screenWidth, height: 400))
+convertedLabel.font = UIFont(name: "KohinoorTelugu-Medium", size: 30)
 convertedLabel.textColor = UIColor.purple
 convertedLabel.text = "0"
 convertedLabel.lineBreakMode = .byWordWrapping
@@ -88,15 +88,22 @@ public func toBinary(num: Int) -> String {
 public func updateLabels(messageString: String) {
   messageLabel.text = "Message: " + messageString
   
-  var convertedString = ""
+  var convertedString = "Binary:\n"
+  let maxlinelen = 5 // How many binary numbers on a line
+  var linelen = 0
   // For each charater in messageString, convert to binary
   for index in messageString.indices {
     let ch = String(messageString[index]).unicodeScalars
     let character = Int(ch[ch.startIndex].value)
-    if (convertedString != "") {
+    if (linelen != 0) {
       convertedString += " " + toBinary(num: character)
     } else {
-      convertedString = toBinary(num: character)
+      convertedString += toBinary(num: character)
+    }
+    linelen += 1
+    if (linelen == maxlinelen){
+      convertedString += "\n"
+      linelen = 0
     }
   }
   
