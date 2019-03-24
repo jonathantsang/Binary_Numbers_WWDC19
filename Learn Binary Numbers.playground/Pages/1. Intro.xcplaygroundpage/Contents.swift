@@ -1,5 +1,3 @@
-import UIKit
-import PlaygroundSupport
 //: [Previous](@previous)
 /*:
  

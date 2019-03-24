@@ -8,13 +8,13 @@
  
  ## Base 10
  
- When people think about numbers they usually think of 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 and beyond. This number system is called the decimal system containing 0-9 digits also known as base 10, where 10 denotes an extra grouping for the next level. But how does a computer interpret numbers in the programs and code that has been written. In many cases a computer executes code only filled with 0s and 1s. This is problematic for people who want to represent numbers larger than 0 and 1. Luckily there is a way to represent any number we want with 0s and 1s. 
+ When people think about numbers they usually think of 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 and beyond. This number system is called the decimal system containing 0-9 digits also known as base 10, where 10 denotes an extra grouping for the next level. But how does a computer interpret numbers in the programs and code that has been written? In many cases a computer executes code only filled with 0s and 1s. This is problematic for people who want to represent numbers larger than 0 and 1. Luckily there is a way to represent any number we want with 0s and 1s.
  
  - - -
  - Example:
  How is 23 represented in base 10?
  
- 2 * 10 + 3 * 10 = 23
+ 2 * 10 + 3 * 1 = 23
  
  Where 23 contains two tens and three ones to form 23.
  
@@ -115,23 +115,22 @@ import UIKit
 import PlaygroundSupport
 
 // Screen
-let screenSize = UIScreen.main.bounds
-let screenWidth = screenSize.width
-let screenHeight = screenSize.height
+let screenWidth = 500
+let screenHeight = 500
 
 // Create labels
-let numberLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 800, width: 300, height: 60))
+let numberLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 300, width: 300, height: 60))
 numberLabel.font = UIFont.systemFont(ofSize: 50)
 numberLabel.textColor = UIColor.purple
 numberLabel.textAlignment = .center
 numberLabel.text = "0"
-let binaryLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 700, width: 300, height: 60))
+let binaryLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 200, width: 300, height: 60))
 binaryLabel.font = UIFont.systemFont(ofSize: 50)
 binaryLabel.textColor = UIColor.purple
 binaryLabel.textAlignment = .center
 binaryLabel.text = "0"
 
-var view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight))
+var view = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
 view.backgroundColor = UIColor.white
 
 view.addSubview(numberLabel)

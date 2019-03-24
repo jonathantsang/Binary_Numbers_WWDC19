@@ -37,23 +37,22 @@ import UIKit
 import PlaygroundSupport
 
 // Screen
-let screenSize = UIScreen.main.bounds
-let screenWidth = screenSize.width
-let screenHeight = screenSize.height
+let screenWidth = 500
+let screenHeight = 500
 
 // Create labels
-let numberLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 700, width: 300, height: 60))
+let numberLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 200, width: 300, height: 60))
 numberLabel.font = UIFont.systemFont(ofSize: 50)
 numberLabel.textColor = UIColor.purple
 numberLabel.textAlignment = .center
 numberLabel.text = "0"
-let binaryLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 800, width: 300, height: 60))
+let binaryLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 300, width: 300, height: 60))
 binaryLabel.font = UIFont.systemFont(ofSize: 50)
 binaryLabel.textColor = UIColor.purple
 binaryLabel.textAlignment = .center
 binaryLabel.text = "0"
 
-var view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight))
+var view = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
 view.backgroundColor = UIColor.white
 
 view.addSubview(binaryLabel)

@@ -44,26 +44,25 @@ import UIKit
 import PlaygroundSupport
 
 // Screen
-let screenSize = UIScreen.main.bounds
-let screenWidth = screenSize.width
-let screenHeight = screenSize.height
+let screenWidth = 500
+let screenHeight = 500
 
 // Create labels
-let messageLabel = UILabel(frame: CGRect(x: 50, y: screenWidth - 800, width: screenWidth, height: 60))
+let messageLabel = UILabel(frame: CGRect(x: 50, y: screenWidth - 300, width: screenWidth, height: 60))
 messageLabel.font = UIFont.systemFont(ofSize: 50)
 messageLabel.textColor = UIColor.purple
 messageLabel.text = "0"
 messageLabel.lineBreakMode = .byWordWrapping
 messageLabel.numberOfLines = 0
 
-let convertedLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 700, width: screenWidth, height: 60))
+let convertedLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 200, width: screenWidth, height: 60))
 convertedLabel.font = UIFont.systemFont(ofSize: 30)
 convertedLabel.textColor = UIColor.purple
 convertedLabel.text = "0"
 convertedLabel.lineBreakMode = .byWordWrapping
 convertedLabel.numberOfLines = 0
 
-var view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight))
+var view = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
 view.backgroundColor = UIColor.white
 
 view.addSubview(messageLabel)
