@@ -1,6 +1,7 @@
 import UIKit
 import PlaygroundSupport
-// Please set the Xcode Playground Platform Setting to "iOS"
+//: [Previous](@previous)
+
 /*:
  - - -
  
@@ -12,3 +13,6 @@ import PlaygroundSupport
  
  - - -
  */
+
+//: [Next](@next)
+

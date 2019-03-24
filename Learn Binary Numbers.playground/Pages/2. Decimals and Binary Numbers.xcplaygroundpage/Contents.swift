@@ -1,3 +1,5 @@
+//: [Previous](@previous)
+
 /*:
  - - -
  ## What is a binary number?
@@ -7,7 +9,7 @@
  
  ## Base 10
  
- When people think about numbers they usually think of 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 and beyond. But how does a computer interpret numbers in the programs and code that has been written. In many cases a computer executes code only filled with 0s and 1s. This is problematic for people who want to represent numbers larger than 0 and 1. Luckily there is a way to represent any number we want with 0s and 1s. Our usual number system also known as the decimal system from 0-9 digits is called base 10, where 10 denotes an extra grouping for the next level.
+ When people think about numbers they usually think of 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 and beyond. This number system is called the decimal system containing 0-9 digits also known as base 10, where 10 denotes an extra grouping for the next level. But how does a computer interpret numbers in the programs and code that has been written. In many cases a computer executes code only filled with 0s and 1s. This is problematic for people who want to represent numbers larger than 0 and 1. Luckily there is a way to represent any number we want with 0s and 1s. 
  
  - - -
  - Example:
@@ -166,4 +168,7 @@ updateLabels(numberString: base10number)
 
 PlaygroundPage.current.liveView = view
 //#-end-hidden-code
+
+//: [Next](@next)
+
 
