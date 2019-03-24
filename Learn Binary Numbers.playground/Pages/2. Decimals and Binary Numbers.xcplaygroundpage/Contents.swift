@@ -1,5 +1,4 @@
 //: [Previous](@previous)
-
 /*:
  - - -
  ## What is a binary number?

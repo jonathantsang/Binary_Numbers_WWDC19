@@ -56,8 +56,8 @@ binaryLabel.text = "0"
 var view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight))
 view.backgroundColor = UIColor.white
 
-view.addSubview(numberLabel)
 view.addSubview(binaryLabel)
+view.addSubview(numberLabel)
 
 // Converts a binary string to a decimal string
 public func toDecimal(num: String) -> Int {
