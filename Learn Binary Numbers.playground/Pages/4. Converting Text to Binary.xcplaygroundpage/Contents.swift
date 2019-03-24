@@ -29,12 +29,12 @@
  
  - - -
  
- Try writing your name in the message below and see what your name is in binary.
+ Try writing your name in the message below and see what your name is in binary. Make sure to include "" around your name in the input.
  
  - - -
  */
 
-var message = /*#-editable-code*/10/*#-end-editable-code*/
+var message = /*#-editable-code*/"Jon"/*#-end-editable-code*/
 
 //#-hidden-code
 
@@ -48,30 +48,30 @@ let screenWidth = screenSize.width
 let screenHeight = screenSize.height
 
 // Create labels
-let numberLabel = UILabel(frame: CGRect(x: screenWidth / 2, y: 100, width: 300, height: 60))
-numberLabel.font = UIFont.systemFont(ofSize: 50)
-numberLabel.textColor = UIColor.purple
-numberLabel.textAlignment = .center
-numberLabel.text = "0"
-let binaryLabel = UILabel(frame: CGRect(x: screenWidth / 2, y: screenHeight - 500, width: 300, height: 60))
-binaryLabel.font = UIFont.systemFont(ofSize: 50)
-binaryLabel.textColor = UIColor.purple
-binaryLabel.textAlignment = .center
-binaryLabel.text = "0"
+let messageLabel = UILabel(frame: CGRect(x: 0, y: 100, width: 300, height: 60))
+messageLabel.font = UIFont.systemFont(ofSize: 50)
+messageLabel.textColor = UIColor.purple
+messageLabel.textAlignment = .left
+messageLabel.text = "0"
+let convertedLabel = UILabel(frame: CGRect(x: 0, y: screenHeight - 500, width: screenWidth, height: 60))
+convertedLabel.font = UIFont.systemFont(ofSize: 30)
+convertedLabel.textColor = UIColor.purple
+convertedLabel.textAlignment = .left
+convertedLabel.text = "0"
 
 var view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight))
 view.backgroundColor = UIColor.white
 
-view.addSubview(numberLabel)
-view.addSubview(binaryLabel)
+view.addSubview(messageLabel)
+view.addSubview(convertedLabel)
 
 // Converts a number string to a binary string
-public func toBinary(num: String) -> String {
-  if (num == "0"){
+public func toBinary(num: Int) -> String {
+  if (num == 0){
     return "0"
   }
   var ans = ""
-  var number = Int(num)!
+  var number = num
   while (number > 0){
     let quotient = number / 2
     let remainder = number % 2
@@ -82,16 +82,26 @@ public func toBinary(num: String) -> String {
 }
 
 // Update the number and label when it is changed
-public func updateLabels(numberString: Int) {
-  numberLabel.text = "Decimal: " + String(numberString)
+public func updateLabels(messageString: String) {
+  messageLabel.text = "Message: " + messageString
   
-  let binaryString = toBinary(num: String(numberString))
-  binaryLabel.text = "Binary: " + binaryString
-  // Check if done
+  var convertedString = ""
+  // For each charater in messageString, convert to binary
+  for index in messageString.indices {
+    let ch = String(messageString[index]).unicodeScalars
+    let character = Int(ch[ch.startIndex].value)
+    if (convertedString != "") {
+      convertedString += " " + toBinary(num: character)
+    } else {
+      convertedString = toBinary(num: character)
+    }
+  }
+  
+  convertedLabel.text = convertedString  // Check if done
 }
 
 // Draw Labels
-updateLabels(numberString: message)
+updateLabels(messageString: message)
 
 PlaygroundPage.current.liveView = view
 //#-end-hidden-code
