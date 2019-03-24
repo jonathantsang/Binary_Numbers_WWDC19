@@ -1,9 +1,40 @@
 //: [Previous](@previous)
 
 /*:
- Now that we have tried converting decimal numbers to binary numbers we can
+ - - -
+ ## Conversion text to binary numbers
  
+ - callout(Goal):
+ Learn about how characters are represented in computers and how we can convert them to binary numbers.
+ 
+ - - -
+ 
+ We learned that computers represent decimal numbers as binary numbers, but what happens when we have characters? How do we represent a character as 0s and 1s when it doesn't have a numerical value. In fact the characters do have a numerical value in an ASCII table. An ASCII table is a mapping for some of the most commonly used letters, symbols, and characters to a integer value that is understood by computers.
+ 
+ Looking at an ascii table, we can see that the character a is represented as 97.
+ 
+ Lower case letters are represented by their own number. Such as:
+ a -> 97
+ b -> 98
+ 
+ Capital letters are also represented with their own unique numbers.
+ A -> 65
+ 
+ - Example:
+ How is the letter a represented in base 2?
+ 
+ We can examine an ascii table and see the letter a is the number 97. This is in base 10, and we learned in previous lessons how to convert from base 10 to base 2.
+ 
+ After doing the steps to convert a base 10 number to base 2 we get 97 is 1100001 in base 2.
+ 
+ - - -
+ 
+ Try writing your name in the message below and see what your name is in binary.
+ 
+ - - -
  */
+
+var message = /*#-editable-code*/10/*#-end-editable-code*/
 
 //#-hidden-code
 
@@ -60,7 +91,7 @@ public func updateLabels(numberString: Int) {
 }
 
 // Draw Labels
-updateLabels(numberString: base10number)
+updateLabels(numberString: message)
 
 PlaygroundPage.current.liveView = view
 //#-end-hidden-code

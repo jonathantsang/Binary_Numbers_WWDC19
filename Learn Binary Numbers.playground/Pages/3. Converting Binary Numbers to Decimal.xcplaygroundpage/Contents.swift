@@ -1,9 +1,5 @@
 //: [Previous](@previous)
 
-//#-hidden-code
-
-//#-end-hidden-code
-
 /*:
  - - -
  ## Conversion from Binary to Decimal
@@ -22,6 +18,8 @@
  1 * 2^4 + 0 * 2^3 + 1 * 2^2 + 1 * 2^1 + 1 * 2^0 = 23
  
  This can also be represented as 10111.
+ 
+ We know from this binary number it contains 2^4, 2^2, 2^1 and 2^1 based on which digits are 1s and which are 0s.
  
  - - -
  
