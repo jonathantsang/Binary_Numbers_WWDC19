@@ -4,9 +4,9 @@
  - - -
  # Learn Binary Numbers by Jonathan Tsang
  - Note: We will cover
- * Differences in Decimal and Binary Numbers
- * Show conversion from base 10 to base 2 and vice versa
- * Show how text can be represented in base 2
+ * Differences in decimal and binary numbers
+ * Show conversion from decimal to binary and vice versa
+ * Show how text can be represented in binary
  - - -
  
  */

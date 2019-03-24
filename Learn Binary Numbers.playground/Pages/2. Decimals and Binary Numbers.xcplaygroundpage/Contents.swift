@@ -124,6 +124,7 @@ numberLabel.font = UIFont.systemFont(ofSize: 50)
 numberLabel.textColor = UIColor.purple
 numberLabel.textAlignment = .center
 numberLabel.text = "0"
+
 let binaryLabel = UILabel(frame: CGRect(x: 50, y: screenHeight - 200, width: 300, height: 60))
 binaryLabel.font = UIFont.systemFont(ofSize: 50)
 binaryLabel.textColor = UIColor.purple
@@ -132,6 +133,13 @@ binaryLabel.text = "0"
 
 var view = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
 view.backgroundColor = UIColor.white
+
+// Draw emojis
+let emoji = UIImage(named: "happyemoji.png")
+
+let imageView = UIImageView(image: emoji!)
+imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+view.addSubview(imageView)
 
 view.addSubview(numberLabel)
 view.addSubview(binaryLabel)

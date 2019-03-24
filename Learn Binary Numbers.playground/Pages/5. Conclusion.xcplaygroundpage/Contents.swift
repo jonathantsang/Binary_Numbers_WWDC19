@@ -10,11 +10,11 @@
  - How to convert to base 2 from base 10 and vice versa
  - Learned about characters and their ASCII number representation
  
- Learning Beyond
+ There are many more topics for learning beyond in this area of number theory with topics ranging in:
  
  - Even more number systems beyeond base 2 and base 10, with base 6 known as hexadecimal, base 8 octets, and even bases larger than 10
- - Learn about bit operators in binary numbers how you can change a number based on which 0s and 1s it possesses
- 
-*/
+ - AND, OR, XOR, and other bit operators that operate on binary numbers. How you can change a number based on which 0s and 1s it possesses.
+ - Bit shifting in binary numbers to count the number of bits, find patterns in the bits, and more
+ */
 
 //: [Next](@next)
